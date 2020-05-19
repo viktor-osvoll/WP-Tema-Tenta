@@ -1,15 +1,13 @@
 <?php
 /**
- * The template for displaying all cat posts
+ * The template for displaying all single posts
  *
  * @package understrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-?>
 
-<?
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -28,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php
 				while ( have_posts() ) {
 					the_post();
-					get_template_part( 'loop-templates/content', 'single-cat' );
+					get_template_part( 'loop-templates/content', 'single-cat');
 					understrap_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
