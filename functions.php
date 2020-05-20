@@ -33,3 +33,7 @@ $understrap_includes = array(
 foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
+
+if(function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
