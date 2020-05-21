@@ -1,5 +1,5 @@
 <?
-if( function_exists('acf_add_local_field_group') ):
+/* if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
         'key' => 'group_5ec13d1b37e3c',
@@ -309,5 +309,5 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
     
-    endif;
+    endif; */
 ?>
