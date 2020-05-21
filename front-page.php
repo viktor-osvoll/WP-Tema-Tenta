@@ -33,8 +33,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 	
 				<? get_template_part('global-templates/latest-cats'); ?>
-				
+
 				<? get_template_part('global-templates/success_stories'); ?>
+
+				<? get_template_part('global-templates/adoptions'); ?>
 
 			</main><!-- #main -->
 
