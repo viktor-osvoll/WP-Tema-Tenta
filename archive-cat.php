@@ -31,11 +31,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<header class="page-header">
 						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						/* the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' ); */
 						?>
 					</header><!-- .page-header -->
+
+					<div class="container">
+						<div class="row">
+					
+
 					<?php
+
 					// Start the loop.
 					while ( have_posts() ) {
 						the_post();
@@ -51,14 +57,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					get_template_part( 'loop-templates/content', 'none' );
 				}
 				?>
-
+				</div> <!-- /row -->
+			</div>	<!-- /container -->
 			</main><!-- #main -->
 
 			<?php
 			// Display the pagination component.
 			understrap_pagination();
 			// Do the right sidebar check.
-			get_template_part( 'global-templates/right-sidebar-check' );
+			/* get_template_part( 'global-templates/right-sidebar-check' ); */
 			?>
 
 		</div><!-- .row -->
