@@ -30,9 +30,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				if ( have_posts() ) {
 					?>
 					<header class="page-header">
+						<h1 class="top-text" style="text-align: center;">All cats</h1>
 						<?php
 						/* the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' ); */
+						
 						?>
 					</header><!-- .page-header -->
 
@@ -51,6 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
+						
 						get_template_part('loop-templates/content', 'card-cat');
 					}
 				} else {
