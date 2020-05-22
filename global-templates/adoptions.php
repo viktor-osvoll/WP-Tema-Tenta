@@ -15,8 +15,10 @@ defined( 'ABSPATH' ) || exit;
 ]); ?>
 
 <? while($adopting->have_posts()) : $adopting->the_post(); ?>
-    <? the_title(); ?>
-        <? the_field('how_to_adopt'); ?>
+    <div class="zone">
+        <? the_title(); ?> <br>
+        <? the_field('how_to_adopt'); ?> <br>
+    </div>
 <? endwhile; ?>
 
 <? wp_reset_postdata(); ?>

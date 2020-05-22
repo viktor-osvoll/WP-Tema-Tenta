@@ -24,7 +24,7 @@ $bg_color = get_field('hero_background_color');
 	<?php get_template_part( 'global-templates/hero-template' ); /* Importing the hero */?>
 <?php endif; ?>
 
-<div class="wrapper" id="index-wrapper" style="background-color: <? echo $bg_color ?>;">
+<div class="wrapper" id="index-wrapper" style="background-color: <? echo $bg_color ?>; overflow: hidden;">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -34,11 +34,14 @@ $bg_color = get_field('hero_background_color');
 			<main class="site-main" id="main">
 	
 				<? get_template_part('global-templates/latest-cats'); ?>
-
+									<br>
+									<hr>
 				<? get_template_part('global-templates/success_stories'); ?>
-
+									<br>
+									<hr>
 				<? get_template_part('global-templates/adoptions'); ?>
-
+									<br>
+									<hr>
 				<? the_content(); ?>
 
 				

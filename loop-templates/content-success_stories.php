@@ -8,9 +8,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
-
-<div class="col-12 col-md-12 col-lg-6">
-    <h1><? the_title(); ?></h1>
-        <p><? the_field('success_story'); ?></p>
-    <? the_post_thumbnail(); ?>
+<div class="media col-12 col-md-12 col-lg-12 success-media">
+  <div class="media-body media-text">
+    <h5 class="mt-0"><? the_title(); ?></h5>
+    <p><? the_field('success_story'); ?></p>
+  </div>
 </div>

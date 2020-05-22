@@ -47,7 +47,9 @@
   }
 
   .wpcf7-form {
-
+      background-color: lightgray;
+      padding: 2%;
+      border-radius: 25px;
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;

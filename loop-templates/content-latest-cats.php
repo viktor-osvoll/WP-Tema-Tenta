@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 <? $image = get_field('cat_image'); ?>
 
 <!-- Card -->
-<div class="card mx-auto col-5 col-md-5 col-lg-5">
+<div class="card mx-auto col-5 col-md-5 col-lg-5 cat">
 
   <!-- Card content -->
   <div class="card-body d-flex flex-row">
