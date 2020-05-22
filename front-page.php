@@ -39,6 +39,8 @@ $bg_color = get_field('hero_background_color');
 
 				<? get_template_part('global-templates/adoptions'); ?>
 
+				<? the_content(); ?>
+
 				
 
 			</main><!-- #main -->
