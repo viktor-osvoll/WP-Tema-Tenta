@@ -9,46 +9,71 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<? $image = get_field('cat_image'); ?>
 
-	<header class="entry-header">
+<main>
+    <div class="container">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <!--Section: Post-->
+        <section class="mt-3">
 
-		<div class="entry-meta">
+            <!--Grid row-->
+            <div class="row wow fadeIn">
 
-			<?php understrap_posted_on(); ?>
+                <!--Grid column-->
+                <div class="col-md-7 col-mb-7 col-lg-7 mx-auto">
 
-		</div><!-- .entry-meta -->
 
-	</header><!-- .entry-header -->
+					<!-- image -->
+			<?if(!empty($image) ) : ?>
+           <img class="img-fluid z-depth-1-half mb-4 single-cat-object" src="<? echo esc_url($image['url']); ?>" alt="<? echo esc_attr($image['alt']); ?>">
+           <? endif;  ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                    <!--Card-->
+                    <div class="card mb-4 single-cat-object">
 
-	<div class="entry-content">
-    <?
-           $image = get_field('cat_image');
-           if(!empty($image) ) : ?>
-           <img src="<? echo esc_url($image['url']); ?>" alt="<? echo esc_attr($image['alt']); ?>">
-           <? endif; ?>
-           <p><? the_field('cat_description'); ?></p>
-           <p><? the_field('cat_city'); ?></p>
-           <p><? the_field('cat_color'); ?></p>
-           <p><? the_title(); ?> was born <? the_field('cat_age'); ?></p>
-           <p><? the_field('cat_gender'); ?></p>
-           <p><? the_field('cat_weight'); ?> KG</p>
-           <p>Is adopted: <? the_field('cat_adopted'); ?></p>
+                        <!--Card content-->
+                        <div class="card-body">
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+                            <p>by <b><? the_author(); ?></b> - <? the_date(); ?></p>
 
-	</div><!-- .entry-content -->
+                            <hr>
+
+                            <p class="h5 my-4"><b><? the_title(); ?></b> </p>
+
+                            <p>Born on: <b><? the_field('cat_age'); ?></b></p>
+
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Lives in: <? the_field('cat_city'); ?></p>
+                                <footer class="blockquote-footer">Adopted:
+                                    <cite title="Source Title"><? the_field('cat_adopted'); ?></cite>
+                                </footer>
+                            </blockquote>
+
+							<p class="h5 my-4"><? the_title(); ?> is a <? the_field('cat_color') ?> <? the_field('cat_gender'); ?> cat <br> and weighs <? the_field('cat_weight'); ?> Kg</p>
+
+                            <p><? the_field('cat_description'); ?></p>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                    <!--Card-->
+                   
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Post-->
+
+    </div>
+</main>
+<!--Main layout-->
 
 	<footer class="entry-footer">
 
@@ -56,4 +81,3 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</article><!-- #post-## -->

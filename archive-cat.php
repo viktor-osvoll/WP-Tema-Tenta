@@ -13,9 +13,10 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
+$bg_color = get_field('hero_background_color');
 ?>
 
-<div class="wrapper" id="archive-wrapper">
+<div class="wrapper" id="archive-wrapper" style="background-color: <? echo $bg_color ?>; overflow: hidden;">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
