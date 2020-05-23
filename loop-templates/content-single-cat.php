@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 
 							<p class="h5 my-4"><? the_title(); ?> is a <? the_field('cat_color') ?> <? the_field('cat_gender'); ?> cat <br> and weighs <? the_field('cat_weight'); ?> Kg</p>
 
-                            <p><? the_field('cat_description'); ?></p>
+                            <p>About <? the_title(); ?>: <br> <? the_field('cat_description'); ?></p>
 
                         </div>
 

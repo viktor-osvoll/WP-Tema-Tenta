@@ -11,8 +11,9 @@ defined( 'ABSPATH' ) || exit;
 
 <? $image = get_field('cat_image'); ?>
 
-<!-- Card -->
-<div class="card mx-auto col-5 col-md-5 col-lg-5 cat">
+<div class="mx-auto col-12 col-md-6 col-lg-6">
+  <!-- Card -->
+  <div class="card cat">
 
   <!-- Card content -->
   <div class="card-body d-flex flex-row">
@@ -52,12 +53,6 @@ defined( 'ABSPATH' ) || exit;
 
   </div>
 
-</div>
+ </div>
 <!-- Card -->
-<!-- <div class="col-6 col-md-6 col-lg-6">
-    <? /* if(!empty($image) ) : */ ?>
-        <img class="card-img-top" src="<?/*  echo esc_url($image['url']); ?>" alt="<? echo esc_attr($image['alt']); */ ?>">
-    <? /* endif; */ ?>
-    <a style="border: 1px solid black;" href="<? /* the_permalink(); */ ?>"><?/*  the_title(); */ ?></a>
-    <p><? /* the_field('cat_gender'); */ ?></p>
-</div>   -->
+</div> <!-- /col-div -->
