@@ -17,8 +17,39 @@ defined( 'ABSPATH' ) || exit;
       <? endif; ?>
       <div class="card-body">
           <h5 class="card-title"><? the_title(); ?></h5>
-          <p class="card-text"><? the_field('cat_gender'); ?></p>
+          <p class="card-text"><? 
+
+              $genders = get_the_terms($post->ID, 'genders');
+
+              foreach ($genders as $gender) {
+
+                $gender_links = get_term_link($gender);
+            
+              echo '<p>' . $gender->name . '</p>';
+
+              echo '<a href="' . esc_url($gender_links) . '">' . $gender->name . '</a>';
+              
+              /* echo '<a href="' . esc_url($genderlink) . '">' . $term->name . '</a>'; */
+              }
+
+
+?></p>
           <a href="<? the_permalink(); ?>" class="btn btn-primary">View cat</a>
+          <?
+            /* $terms = get_terms('genders');
+            echo '<ul>';
+            foreach($terms as $term) {
+              $term_link = get_term_link($terms);
+
+             /*  if(is_wp_error($term_link) ) {
+                continue;
+              } */
+               /*  echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>'; */
+            /* } */
+            /*   echo '</ul>' */
+
+          ?>
       </div> <!-- /card-body -->
     </div> <!-- /card -->
 </div> <!-- /col -->
+

@@ -16,8 +16,10 @@ defined( 'ABSPATH' ) || exit;
 
 <section id="front-page-hero" style="background-color: <? echo $bg_color ?>;
  background-image: url('<? echo $image['url']; ?>');">
-    <div class="container hero-text">
-        <h1><? the_field('hero_title'); ?></h1>
-        <h2><? the_field('hero_subtitle'); ?></h2>
+  <div class="container d-flex h-100">
+    <div class="container hero-text justify-content-center align-self-center">
+        <h1 class="hero-title"><? the_field('hero_title'); ?></h1>
+        <h2 class="hero-subtitle"><? the_field('hero_subtitle'); ?></h2>
     </div>
+  </div>
 </section>
