@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <? $image = get_field('cat_image'); ?>
-<div class="col-sm-12 col-md-6 col-lg-3 cat-spacing">
+<div class="col-sm-3 col-md-3 col-lg-3 cat-spacing">
     <div class="card one-cat">
       <? if(!empty($image) ) : ?>
         <img class="card-img-top archive-cat-img" src="<? echo esc_url($image['url']); ?>" alt="<? echo esc_attr($image['alt']); ?>">
@@ -23,15 +23,9 @@ defined( 'ABSPATH' ) || exit;
 
               foreach ($genders as $gender) {
 
-                echo $gender->name;
-                /* $gender_links = get_term_link($gender); */ /* Getting the link to the equivalent gender taxonomy */
-            
-                /* echo '<a href="' . esc_url($gender_links) . '">' . $gender->name . '</a>'; */
-              
-              
+                echo $gender->name;           
+                
               }
-
-
 ?></p>
           <a href="<? the_permalink(); ?>" class="btn btn-primary">View cat</a>
           

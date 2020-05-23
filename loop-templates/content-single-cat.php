@@ -50,7 +50,15 @@ defined( 'ABSPATH' ) || exit;
                                 </footer>
                             </blockquote>
 
-							<p class="h5 my-4"><? the_title(); ?> is a <? the_field('cat_color') ?> <? the_field('cat_gender'); ?> cat <br> and weighs <? the_field('cat_weight'); ?> Kg</p>
+							<p class="h5 my-4"><? the_title(); ?> is a <? the_field('cat_color') ?>
+							 <?  $genders = get_the_terms($post->ID, 'genders'); /* Fetching the cats gender */
+
+							foreach ($genders as $gender) {
+
+ 								 echo  $gender->name;
+
+							} 
+							?> cat <br> and weighs <? the_field('cat_weight'); ?> Kg</p>
 
                             <p>About <? the_title(); ?>: <br> <? the_field('cat_description'); ?></p>
 
