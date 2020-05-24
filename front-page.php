@@ -32,7 +32,8 @@ $bg_color = get_field('hero_background_color');
 
 
 			<main class="site-main" id="main">
-	
+
+			
 				<? get_template_part('global-templates/latest-cats'); ?>
 									<br>
 									<hr>

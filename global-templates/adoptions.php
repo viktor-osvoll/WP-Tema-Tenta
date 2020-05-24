@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
   <div class="adopt">
-            <h1 class="adopt-title">How to adopt</h1>
+            <h1 class="adopt-title">How to adopt</h1> <br>
         </div>
 
 <? $adopting = new WP_Query([
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
     <div class="row">
 
 <? while($adopting->have_posts()) : $adopting->the_post(); ?>
-<div class="col-3 col-md-3 col-lg-3 mx-auto">
+<div class="col-12 col-md-6 col-lg-3 mx-auto">
     <div class="card adoption-card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title"><? the_title(); ?></h5>

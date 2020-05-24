@@ -44,7 +44,13 @@ defined( 'ABSPATH' ) || exit;
                             <p>Born on: <b><? the_field('cat_age'); ?></b></p>
 
                             <blockquote class="blockquote">
-                                <p class="mb-0">Lives in: <? the_field('cat_city'); ?></p>
+                                <p class="mb-0">Lives in: <? $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
+
+                                    foreach ($cities as $city) {
+
+                                        echo  $city->name;
+
+                                    } ?></p>
                                 <footer class="blockquote-footer">Adopted:
                                     <cite title="Source Title"><? the_field('cat_adopted'); ?></cite>
                                 </footer>

@@ -31,7 +31,7 @@ $bg_color = get_field('hero_background_color');
 				if ( have_posts() ) {
 					?>
 					<header class="page-header">
-						<h1 class="top-text" style="text-align: center;">All cats</h1>
+						<h1 class="top-text" style="text-align: center;"><? _e('All cats', ) ?></h1>
 						<?php
 						/* the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' ); */
@@ -55,7 +55,7 @@ $bg_color = get_field('hero_background_color');
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						
-						get_template_part('loop-templates/content', 'card-cat');
+						get_template_part('loop-templates/content-card-cat');
 					}
 				} else {
 					get_template_part( 'loop-templates/content', 'none' );
@@ -69,7 +69,7 @@ $bg_color = get_field('hero_background_color');
 			// Display the pagination component.
 			understrap_pagination();
 			// Do the right sidebar check.
-			/* get_template_part( 'global-templates/right-sidebar-check' ); */
+				/* get_template_part( 'global-templates/right-sidebar-check' ); */
 			?>
 
 		</div><!-- .row -->

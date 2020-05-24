@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
 				<div class="row">
-
+	
 					<?php dynamic_sidebar( 'statichero' ); ?>
 
 				</div>

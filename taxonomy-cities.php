@@ -31,21 +31,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<header class="page-header">
                         <?php
-                        $genders = get_the_terms($post->ID, 'genders'); /* Fetching the cats gender */
+                        
+                        $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
 
-                        foreach ($genders as $gender) {
-          
-                          echo '<h1 style="text-align: center;"> All ' .  $gender->name . ' cats </h1>';
-                        
-                        
+                        foreach ($cities as $city) {
+                      
+                          echo '<h1 style="text-align: center;"> All cats that live in ' .  $city->name . '</h1>';
                         }
+
 						/* the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' ); */
 						?>
                     </header><!-- .page-header -->
                     <div class="container">
                         <div class="row">
-                    
+						
 					<?php
 					// Start the loop.
 					while ( have_posts() ) {

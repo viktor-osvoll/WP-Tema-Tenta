@@ -42,7 +42,19 @@ defined( 'ABSPATH' ) || exit;
   <!-- Card content -->
   <div class="card-body">
     <div class="collapse-content">
-        <p class="card-text">Location: <? the_field('cat_city'); ?></p>
+        <p class="card-text">Location: <? 
+
+        $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
+
+        foreach ($cities as $city) {
+
+          $city_links = get_term_link($city); /* Getting the link to the equivalent gender taxonomy */
+      
+          echo '<a href="' . esc_url($city_links) . '">' . $city->name . '</a>';
+        
+        /* echo '<a href="' . esc_url($genderlink) . '">' . $term->name . '</a>'; */
+        }
+        ?></p>
 
       <!-- Text -->
       <p class="card-text"></p>

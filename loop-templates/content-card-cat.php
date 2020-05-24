@@ -26,8 +26,9 @@ defined( 'ABSPATH' ) || exit;
                 $gender_links = get_term_link($gender); /* Getting the link to the equivalent gender taxonomy */
             
                 echo '<a href="' . esc_url($gender_links) . '">' . $gender->name . '</a>';
+                
+                
               
-              /* echo '<a href="' . esc_url($genderlink) . '">' . $term->name . '</a>'; */
               }
 
 
