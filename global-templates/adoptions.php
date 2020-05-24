@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
   <div class="adopt">
-            <h1 class="adopt-title">How to adopt</h1> <br>
+            <h1 class="adopt-title"><? _e('How to adopt', 'katt-kommando-syd'); ?></h1> <br>
         </div>
 
 <? $adopting = new WP_Query([

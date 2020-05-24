@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
       <!-- Title -->
       <h4 class="card-title font-weight-bold mb-2"><? the_title(); ?></h4>
       <!-- Subtitle -->
-      <p class="card-text"><i class="far fa-clock"></i><? the_title(); ?> was born on: <? the_field('cat_age'); ?></p>
+      <p class="card-text"><i class="far fa-clock"></i><? the_title(); ?> <? _e('was born on', 'katt-kommando-syd'); ?>: <? the_field('cat_age'); ?></p>
 
     </div>
 
@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
   <!-- Card content -->
   <div class="card-body">
     <div class="collapse-content">
-        <p class="card-text">Location: <? 
+        <p class="card-text"><? _e('Location', 'katt-kommando-syd'); ?>: <? 
 
         $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
 
@@ -59,7 +59,7 @@ defined( 'ABSPATH' ) || exit;
       <!-- Text -->
       <p class="card-text"></p>
       <!-- Button -->
-     <a href="<? the_permalink(); ?>" class="btn btn-primary">View cat</a>
+     <a href="<? the_permalink(); ?>" class="btn btn-primary"><? _e('View cat', 'katt-kommando-syd'); ?></a>
       
     </div>
 

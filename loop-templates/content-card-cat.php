@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 ?></p>
-          <a href="<? the_permalink(); ?>" class="btn btn-primary">View cat</a>
+          <a href="<? the_permalink(); ?>" class="btn btn-primary"><? _e('View cat', 'katt-kommando-syd') ?> </a>
           
       </div> <!-- /card-body -->
     </div> <!-- /card -->

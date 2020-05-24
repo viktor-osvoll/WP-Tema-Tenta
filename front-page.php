@@ -33,6 +33,7 @@ $bg_color = get_field('hero_background_color');
 
 			<main class="site-main" id="main">
 
+			<h1 style="text-align: center;"><? _e('Latest cats', 'katt-kommando-syd'); ?> </h1>
 			
 				<? get_template_part('global-templates/latest-cats'); ?>
 									<br>
@@ -43,7 +44,7 @@ $bg_color = get_field('hero_background_color');
 				<? get_template_part('global-templates/adoptions'); ?>
 									<br>
 									<hr>
-				<? the_content(); ?>
+							<? the_content(); ?>
 
 				
 

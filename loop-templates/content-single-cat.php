@@ -35,28 +35,28 @@ defined( 'ABSPATH' ) || exit;
                         <!--Card content-->
                         <div class="card-body">
 
-                            <p>by <b><? the_author(); ?></b> - <? the_date(); ?></p>
+                            <p><? _e('by','katt-kommando-syd'); ?> <b><? the_author(); ?></b> - <? the_date(); ?></p>
 
                             <hr>
 
                             <p class="h5 my-4"><b><? the_title(); ?></b> </p>
 
-                            <p>Born on: <b><? the_field('cat_age'); ?></b></p>
+                            <p><? _e('Born on', 'katt-kommando-syd'); ?>: <b><? the_field('cat_age'); ?></b></p>
 
                             <blockquote class="blockquote">
-                                <p class="mb-0">Lives in: <? $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
+                                <p class="mb-0"><? _e('Lives in', 'katt-kommando-syd'); ?>: <? $cities = get_the_terms($post->ID, 'cities'); /* Fetching the cats gender */
 
                                     foreach ($cities as $city) {
 
                                         echo  $city->name;
 
                                     } ?></p>
-                                <footer class="blockquote-footer">Adopted:
+                                <footer class="blockquote-footer"><? _e('Adopted', 'katt-kommando-syd');?>:
                                     <cite title="Source Title"><? the_field('cat_adopted'); ?></cite>
                                 </footer>
                             </blockquote>
 
-							<p class="h5 my-4"><? the_title(); ?> is a <? the_field('cat_color') ?>
+							<p class="h5 my-4"><? the_title(); ?> <? _e('is a', 'katt-kommando-syd'); ?> <? the_field('cat_color') ?>
 							 <?  $genders = get_the_terms($post->ID, 'genders'); /* Fetching the cats gender */
 
 							foreach ($genders as $gender) {
@@ -64,9 +64,9 @@ defined( 'ABSPATH' ) || exit;
  								 echo  $gender->name;
 
 							} 
-							?> cat <br> and weighs <? the_field('cat_weight'); ?> Kg</p>
+							?> <? _e('cat', 'katt-kommando-syd'); ?> <br> <? _e('and weighs', 'katt-kommando-syd');?> <? the_field('cat_weight'); ?> Kg</p>
 
-                            <p>About <? the_title(); ?>: <br> <? the_field('cat_description'); ?></p>
+                            <p><? _e('About', 'katt-kommando-syd'); ?> <? the_title(); ?>: <br> <? the_field('cat_description'); ?></p>
 
                         </div>
 

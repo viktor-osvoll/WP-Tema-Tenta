@@ -16,7 +16,7 @@ $success = new WP_Query([
 ]);
 /* var_dump($success); */
 ?>
-
+<h1 style="text-align: center;"><? _e('Success Stories', 'katt-kommando-syd'); ?></h1>
 <? if($success->have_posts() ) : ?>
     <? while($success->have_posts()) : $success->the_post(); ?>
         <? get_template_part('loop-templates/content-success_stories'); ?>

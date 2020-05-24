@@ -31,7 +31,7 @@ $bg_color = get_field('hero_background_color');
 				if ( have_posts() ) {
 					?>
 					<header class="page-header">
-						<h1 class="top-text" style="text-align: center;"><? _e('All cats', ) ?></h1>
+						<h1 class="top-text" style="text-align: center;"><? _e('All cats', 'katt-kommando-syd'); ?></h1>
 						<?php
 						/* the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' ); */
