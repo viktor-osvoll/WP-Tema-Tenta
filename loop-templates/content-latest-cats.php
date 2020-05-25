@@ -48,11 +48,11 @@ defined( 'ABSPATH' ) || exit;
 
         foreach ($cities as $city) {
 
-          $city_links = get_term_link($city); /* Getting the link to the equivalent gender taxonomy */
+          $city_links = get_term_link($city); /* Getting the link to the equivalent city taxonomy */
       
           echo '<a href="' . esc_url($city_links) . '">' . $city->name . '</a>';
         
-        /* echo '<a href="' . esc_url($genderlink) . '">' . $term->name . '</a>'; */
+        
         }
         ?></p>
 

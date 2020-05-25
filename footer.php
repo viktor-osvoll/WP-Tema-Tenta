@@ -26,9 +26,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
+				<h3>Cats in-need of parent in these cities:</h3>
+						<?
 
-						<?php understrap_site_info(); ?>
+						$terms = get_terms( array(
+							'taxonomy' => 'cities',
+							'hide_empty' => true,
+						));
+						
+						echo '<ul class="list-group list-group-flush">';
 
+						foreach( $terms as $term ) {
+							echo '<li class="list-group-item"><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+						}
+
+						echo '</ul>';
+					/* 	$cities = get_the_terms($post->ID, 'cities');  *//* Fetching the cats gender */
+
+                        /* foreach ($cities as $city) {
+                      
+							$city_links = get_term_link($city); */ /* Getting the link to the equivalent gender taxonomy */
+      /* 
+							echo '<a href="' . esc_url($city_links) . '">' . $city . '</a>';
+                        } */
+						?>
+
+						
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->

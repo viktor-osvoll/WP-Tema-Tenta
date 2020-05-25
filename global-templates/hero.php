@@ -23,3 +23,4 @@ if ( is_active_sidebar( 'hero' ) || is_active_sidebar( 'statichero' ) || is_acti
 
 	<?php
 endif;
+
