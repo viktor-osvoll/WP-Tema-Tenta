@@ -17,13 +17,14 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
+$bgcolor = get_field('bgcolor');
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper" id="index-wrapper" style="background-color: <? echo $bgcolor ?>;">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 

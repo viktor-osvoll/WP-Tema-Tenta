@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-				<h3>Cats in-need of parent in these cities:</h3>
+				
 			 			
 						<?
 
