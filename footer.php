@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 				<h3>Cats in-need of parent in these cities:</h3>
+			 			
 						<?
 
 						$terms = get_terms( array(
@@ -34,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							'hide_empty' => true,
 						));
 						
-						echo '<ul class="list-group list-group-flush">';
+						echo '<ul class="list-group list-group-flush col-6 col-md-6 col-lg-6">';
 
 						foreach( $terms as $term ) {
 							echo '<li class="list-group-item"><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';

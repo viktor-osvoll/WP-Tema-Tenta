@@ -18,17 +18,18 @@ if ( is_front_page() ) {
 }
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 
-			<div class="col-md-8 content-area" id="primary">
+			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
-					<?php
+                    <?php
+                    
 					while ( have_posts() ) {
 						the_post();
 						get_template_part( 'loop-templates/content', 'blog' );
@@ -43,8 +44,6 @@ if ( is_front_page() ) {
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-
-            
 
 		</div><!-- .row end -->
 
